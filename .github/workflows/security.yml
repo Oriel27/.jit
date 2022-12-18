@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: python-code-scanning
-      uses: jitsecurity-controls/jit-github-action@v1.6
+      uses: jitsecurity-controls/jit-github-action@v1.7
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: semgrep-code-scanning
-      uses: jitsecurity-controls/jit-github-action@v1.6
+      uses: jitsecurity-controls/jit-github-action@v1.7
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: golang-code-scanning
-      uses: jitsecurity-controls/jit-github-action@v1.6
+      uses: jitsecurity-controls/jit-github-action@v1.7
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: secrets-detection
-      uses: jitsecurity-controls/jit-github-action@v1.6
+      uses: jitsecurity-controls/jit-github-action@v1.7
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
